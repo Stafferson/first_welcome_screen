@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class main_screen_not_welcome extends AppCompatActivity {
 
@@ -60,7 +61,7 @@ public class main_screen_not_welcome extends AppCompatActivity {
     public ArrayList<String> is_in_arr(String request_str) {
         ArrayList<String> arr_ans = new ArrayList<String>();
         for (int i = 0; i < arr_str.length; i++) {
-            if (arr_str[i].contains(request_str)){
+            if (arr_str[i].contains(request_str.toUpperCase())){
                 arr_ans.add(arr_str[i]);
             }
         }
