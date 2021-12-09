@@ -43,12 +43,5 @@ public class main_screen_not_welcome extends AppCompatActivity {
 
         String[] arr_str = {"A", "B", "C", "D", "E", "F", "K", "L", "XZ", "A", "B", "C", "D", "E", "F", "K", "L", "XZ", "A", "B", "C", "D", "E", "F", "K", "L", "XZ", "A", "B", "C", "D", "E", "F", "K", "L", "XZ", "A", "B", "C", "D", "E", "F", "K", "L", "XZ", };
 
-        int counter = 0;
-        int classes
-        for (int i = 0; i < 43; i++) {
-            if (counter < 7) {
-                classes.("7" + arr_str[])
-            }
-        }
     }
 }
