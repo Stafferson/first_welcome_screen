@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -25,6 +26,8 @@ public class main_screen_not_welcome extends AppCompatActivity {
         lv = findViewById(R.id.list_view);
         et = findViewById(R.id.editText_class);
 
+        ArrayAdapter<String> ar_adapt = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1);
+
         et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -44,6 +47,9 @@ public class main_screen_not_welcome extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 System.out.println("?????");
                 System.out.println(s);
+                ArrayAdapter<String> arr_adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1);
+                arr_adapter.addAll(is_in_arr(s.toString()));
+                lv.setAdapter(arr_adapter);
             }
         });
 
@@ -51,11 +57,11 @@ public class main_screen_not_welcome extends AppCompatActivity {
 
     }
 
-    public ArrayList<String> is_in_arr(String [] arr, String request) {
+    public ArrayList<String> is_in_arr(String request_str) {
         ArrayList<String> arr_ans = new ArrayList<String>();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].contains(request)){
-                arr_ans.add(arr[i]);
+        for (int i = 0; i < arr_str.length; i++) {
+            if (arr_str[i].contains(request_str)){
+                arr_ans.add(arr_str[i]);
             }
         }
         return arr_ans;
