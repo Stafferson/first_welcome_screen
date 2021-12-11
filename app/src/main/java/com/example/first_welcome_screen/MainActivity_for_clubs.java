@@ -29,7 +29,7 @@ public class MainActivity_for_clubs extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String str_whatsapp = "https://wa.me/";
-                str_whatsapp += arr[v.getId()];
+                str_whatsapp += arr[view.getId()];
                 Uri uri = Uri.parse(str_whatsapp);
                 Intent i = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(i);
