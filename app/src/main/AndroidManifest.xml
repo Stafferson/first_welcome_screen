@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First_welcome_screen">
         <activity
+            android:name=".MainActivity_for_clubs"
+            android:exported="false" />
+        <activity
             android:name=".main_screen_not_welcome"
             android:exported="false" />
         <activity

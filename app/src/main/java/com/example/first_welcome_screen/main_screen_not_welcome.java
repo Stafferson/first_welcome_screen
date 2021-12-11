@@ -2,9 +2,12 @@ package com.example.first_welcome_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -66,5 +69,12 @@ public class main_screen_not_welcome extends AppCompatActivity {
             }
         }
         return arr_ans;
+    }
+
+    public void lol(View view) {
+        /*Uri uri = Uri.parse("https://wa.me/77783195815"); // missing 'http://' will cause crashed
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);*/
+        startActivity(new Intent(this, MainActivity_for_clubs.class));
     }
 }
