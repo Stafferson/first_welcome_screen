@@ -33,6 +33,7 @@ public class MainActivity_for_clubs extends AppCompatActivity {
                 Uri uri = Uri.parse(str_whatsapp);
                 Intent i = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(i);
+                //1231232
             }
         });
     }
